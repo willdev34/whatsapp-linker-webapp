@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WhatsApp Linker WebApp</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <img src="assets/logo_c.png" alt="Logo WhatsApp Linker" />
+    <h1>Formulário</h1>
+  </header>
+
+  <form id="contact-form">
+    <label for="message">Mensagem personalizada:</label>
+    <textarea id="message" placeholder="Digite sua mensagem aqui... Use {nome} para personalizar." required></textarea>
+
+    <label for="contact-file">Importar arquivo excel:</label>
+    <input type="file" id="contact-file" accept=".txt" />
+
+    <label for="manual-input">Ou insira os contatos manualmente (nome,telefone):</label>
+    <textarea id="manual-input" placeholder="Exemplo: João,55999887766" rows="5"></textarea>
+
+    <button type="submit">Processar Dados</button>
+  </form>
+
+  <div id="output"><label for="message">Links gerados ficarão aqui:</label></div>
+
+  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
