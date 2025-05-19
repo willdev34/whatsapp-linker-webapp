@@ -81,7 +81,7 @@ function renderLinks(results) {
   results.forEach(item => {
     const div = document.createElement("div");
     div.className = "link-item";
-    div.innerHTML = `<strong>${item.name}:</strong> <a href="${item.link}" target="_blank">Abrir link</a>`;
+    div.innerHTML = `<span class="link-name">${item.name}</span><button class="form-button" onclick="window.open('${item.link}', '_blank')">Abrir link</button>`;
     outputDiv.appendChild(div);
   });
 }
